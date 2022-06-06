@@ -11,7 +11,6 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 // Accessing the Ownable method ensures that only the creator of the smart contract can interact with it
 contract DatalinkNFT is ERC721, Ownable {
 
-
     uint256 public nftCounter;
     // Optional mapping for token URIs
     mapping (uint256 => string) private _tokenURIs;
