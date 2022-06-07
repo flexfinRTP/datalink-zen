@@ -32,11 +32,11 @@ contract DatalinkNFT is ERC721, Ownable {
         _tokenURIs[newItemId] = _tokenURI;
     }
 
-    function createNFT(address receiver) public onlyOwner returns (uint256)
+    function createNFT(address receiver, string memory tokenURI) public onlyOwner returns (uint256)
     { //need recvier address in this function, this be called in the contract
         nftCounter++;
         _safeMint(receiver, nftCounter);
-        // _setTokenURI(newItemId, tokenURI);
+        _setTokenURI(nftCounter, tokenURI);
 
         // returns the id for the newly created token
         return nftCounter;
